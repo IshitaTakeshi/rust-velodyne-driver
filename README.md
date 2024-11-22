@@ -1,7 +1,7 @@
 Velodyne VLP-16 driver in Rust
 ==============================
 
-## Usage 
+## Usage
 
 Connect the Velodyne VLP-16 LiDAR to your PC through Ethernet and run
 

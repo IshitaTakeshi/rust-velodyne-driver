@@ -74,6 +74,9 @@ fn main() -> Result<(), std::io::Error> {
 
     let writer = HDF5Writer::from_path("points/points.hdf5").unwrap();
 
+    // In each iteration, we receive a scan covering approximately 4 degrees.
+    // Therefore, in 75 iterations, we obtain a scan covering almost 360 degrees.
+    // The line below processes approximately 300 complete 360-degree scans.
     for i in 0..(75 * 300) {
         socket.recv_from(&mut buf)?;
         let scan_name = format!("{:08}", i);
